@@ -1,6 +1,6 @@
 #include <vector>
 #include "Colour.hpp"
-#include <arm_neon.h>
+// #include <arm_neon.h>
 #include "turboColourMap.hpp"
 
 // 
@@ -19,8 +19,8 @@ public:
     void bufferCallback(const std::vector<double> &);
 
     std::vector<uint32_t> acumBuffer;
-    int bufferLength;
-    int bufferNumber;
+    // int bufferLength = 1024;
+    // int bufferNumber;
 
     std::vector<uint8_t> display; // 32*16 XOffset
     uint8_t xOffset; 

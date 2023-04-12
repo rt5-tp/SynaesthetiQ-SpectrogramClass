@@ -1,19 +1,17 @@
 #include "../src/Spectrogram.hpp"
+#include "fftData.hpp"
 #include <gtest/gtest.h>
 
 
 TEST(runTwoSecondSpectrogram,successSpectrogram){
-
-    
-
     // Using a provided audio sample create two seconds worth of display (aprox 40 frames).
-    Spectrogram spectrogram();
+    Spectrogram spectrogram;
 
-    // for (int sample; sample < 88200; sample += 2048){
+    for (double buff: fftData) {
+        Spectrogram.bufferCallback(buff);
         
-    // }
-    spectrogram.bufferCallback():
-    // 
+        printf("%d\n",Spectrogram.display[0]);
+    }
 }
 
 
