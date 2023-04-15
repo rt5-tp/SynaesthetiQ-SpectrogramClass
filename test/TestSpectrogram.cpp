@@ -3,6 +3,7 @@
 #include <gtest/gtest.h>
 
 
+// A two second test for spectrogram.
 TEST(runTwoSecondSpectrogram,successSpectrogram){
     // Using a provided audio sample create two seconds worth of display (aprox 40 frames).
     Spectrogram spectrogram;
