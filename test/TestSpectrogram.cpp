@@ -7,11 +7,13 @@ TEST(runTwoSecondSpectrogram,successSpectrogram){
     // Using a provided audio sample create two seconds worth of display (aprox 40 frames).
     Spectrogram spectrogram;
 
-    for (double buff: fftData) {
-        Spectrogram.bufferCallback(buff);
+    for (std::vector<double> buff: fftData) {
+        spectrogram.bufferCallback(buff);
         
-        printf("%d\n",Spectrogram.display[0]);
+        printf("%d\n",spectrogram.display[0]);
     }
+
+    spectrogram.~Spectrogram();
 }
 
 
